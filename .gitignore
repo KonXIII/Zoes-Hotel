@@ -1,0 +1,48 @@
+.DS_Store
+*.log
+node_modules
+# .claude/: keep the kit's hooks (settings.json); skill links + personal settings stay local
+.claude/*
+!.claude/settings.json
+
+# Playwright MCP session logs/snapshots
+.playwright-mcp/
+
+# Python bytecode from skill scripts
+__pycache__/
+*.pyc
+
+# --- Next.js (from starter/.gitignore) ---
+node_modules
+.next
+out
+dist
+.DS_Store
+*.log
+.env
+.env.local
+.env*.local
+.vercel
+*.tsbuildinfo
+next-env.d.ts
+
+# Playwright MCP session logs/snapshots
+.playwright-mcp/
+
+# OG kit: skill-check logs and personal Claude settings stay local
+.claude/skill-log/
+.claude/settings.local.json
+
+# Nested copy of the kit (has its own git repo)
+/OG WEB DESIGN/
+.next/
+.env*
+!.env.example
+.vercel
+.taste-skill/
+
+# Raw AI video originals from the tour prototype (the trimmed versions are kept)
+prototypes/3d-tour/media/video/_original-*
+# Python caches / OS
+__pycache__/
+.DS_Store

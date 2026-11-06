@@ -1,0 +1,280 @@
+{
+  "version": 1,
+  "skills": {
+    "anatomy": {
+      "source": "wheresryan22/anatomy",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "sourceCommit": "1482e84"
+    },
+    "animation-performance": {
+      "source": "emilkowalski/skills",
+      "sourceType": "github",
+      "skillPath": "skills/animation-performance/SKILL.md",
+      "sourceCommit": "c8a7962"
+    },
+    "animation-vocabulary": {
+      "source": "emilkowalski/skills",
+      "sourceType": "github",
+      "skillPath": "skills/animation-vocabulary/SKILL.md",
+      "sourceCommit": "2d22863",
+      "computedHash": "0058036865ecbb864fd0c4132efcc62425355d6e99c7e6ef6a936742d62a5dea"
+    },
+    "apple-design": {
+      "source": "emilkowalski/skills",
+      "sourceType": "github",
+      "skillPath": "skills/apple-design/SKILL.md",
+      "sourceCommit": "2d22863",
+      "computedHash": "0190417d092a0df447b000154e39733ea6d97efad6d3bec8a6ce3845aeb88914"
+    },
+    "brand-artifacts": {
+      "source": "local",
+      "sourceType": "local",
+      "skillPath": "SKILL.md",
+      "note": "Copied from ~/.claude/skills/brand-artifacts on 2026-11-05 (created 2026-08-01, same suite as brand-identity: logos, marks, icons, packaging via Higgsfield); upstream origin not recorded."
+    },
+    "brand-identity": {
+      "source": "local",
+      "sourceType": "local",
+      "skillPath": "SKILL.md",
+      "note": "Copied from ~/.claude/skills/brand-identity on 2026-11-05 (created 2026-08-01); upstream origin not recorded. Suite with brand-artifacts + brand-imagery."
+    },
+    "brand-imagery": {
+      "source": "local",
+      "sourceType": "local",
+      "skillPath": "SKILL.md",
+      "note": "Copied from ~/.claude/skills/brand-imagery on 2026-11-05 (created 2026-08-01, same suite as brand-identity: real-photo restore/restyle via Higgsfield); upstream origin not recorded."
+    },
+    "break-ui": {
+      "source": "emilkowalski/skills",
+      "sourceType": "github",
+      "skillPath": "skills/break-ui/SKILL.md",
+      "sourceCommit": "2d22863",
+      "computedHash": "60ada67662925f4df5e3c6ff41cac3ab241b66f8898100a5ffcd7ba7196cb868"
+    },
+    "choreograph": {
+      "source": "emilkowalski/skills",
+      "sourceType": "github",
+      "skillPath": "skills/choreograph/SKILL.md",
+      "sourceCommit": "c8a7962",
+      "note": "Added 2026-11-05 after a security scan (clean)."
+    },
+    "copy-editing": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "skillPath": "skills/copy-editing/SKILL.md",
+      "sourceCommit": "88c79f6",
+      "note": "Added 2026-11-05 after a security scan (clean). LOCAL EDIT (re-apply on update): one 'OG Web Design kit (read this first)' paragraph before 'Check for product marketing context first', pointing at brief.md / .impeccable.md / art-direction.md and the AI-tells list."
+    },
+    "copywriting": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "skillPath": "skills/copywriting/SKILL.md",
+      "sourceCommit": "88c79f6",
+      "note": "Added 2026-11-05 after a security scan (clean). LOCAL EDIT (re-apply on update): one 'OG Web Design kit (read this first)' paragraph before 'Check for product marketing context first', pointing at brief.md / .impeccable.md / art-direction.md and the AI-tells list."
+    },
+    "design-taste-frontend": {
+      "source": "Leonxlnx/taste-skill",
+      "sourceType": "github",
+      "skillPath": "skills/taste-skill/SKILL.md",
+      "sourceCommit": "9b4bf93",
+      "note": "v2.5.0 (released 2026-11-04). Full security review 2026-11-05: Chrome-only child processes, downloads limited to pinned icon sets (jsdelivr), Picsum/Wikimedia photos, Google Fonts, OSM Overpass (fx-map only); no hidden code; 958 SVGs clean. Kit overrides in CLAUDE.md (scroll reveals kept, real contact data, next/font, never run effects.mjs publish in a project). Updated 2026-11-05 to 9b4bf93 (font-load WARN, --root, per-page report folders)."
+    },
+    "emil-animate": {
+      "source": "emilkowalski/skills",
+      "sourceType": "github",
+      "skillPath": "skills/animate/SKILL.md",
+      "sourceCommit": "c8a7962",
+      "note": "Upstream skills/animate, renamed: frontmatter `name: animate` -> `emil-animate` to avoid clashing with the global `animate` skill. Re-apply on every update. Updated 2026-11-05 to c8a7962 (Motion 14.2 guidance)."
+    },
+    "emil-design-eng": {
+      "source": "emilkowalski/skills",
+      "sourceType": "github",
+      "skillPath": "skills/emil-design-eng/SKILL.md",
+      "sourceCommit": "c8a7962",
+      "note": "RENAMED 2026-11-05 to og-emil-design-eng (folder + frontmatter name): a different global copy in ~/.claude/skills was hiding the kit's newer version; re-apply the rename on every update. 2026-11-05: an older global copy used to hide this skill; the global copy was moved to ~/.claude/skills-backup-2026-11-05/kit-duplicates."
+    },
+    "find-animation-opportunities": {
+      "source": "emilkowalski/skills",
+      "sourceType": "github",
+      "skillPath": "skills/find-animation-opportunities/SKILL.md",
+      "sourceCommit": "2d22863",
+      "computedHash": "465d087c41768e4f14ed640dd049036009f613feb55baaa5831b68b33178f9d2"
+    },
+    "gsap-core": {
+      "source": "greensock/gsap-skills",
+      "sourceType": "github",
+      "skillPath": "skills/gsap-core/SKILL.md",
+      "sourceCommit": "96c4b01",
+      "note": "Pinned 2026-11-05: identical to 96c4b01 and to upstream HEAD."
+    },
+    "gsap-frameworks": {
+      "source": "greensock/gsap-skills",
+      "sourceType": "github",
+      "skillPath": "skills/gsap-frameworks/SKILL.md",
+      "sourceCommit": "aed9cfd",
+      "note": "Updated 2026-11-05 to aed9cfd (adds Nuxt 4). Mentions examples/vue + examples/nuxt, which live at the gsap-skills repo root and are not vendored (Vue/Nuxt are outside the kit stack)."
+    },
+    "gsap-performance": {
+      "source": "greensock/gsap-skills",
+      "sourceType": "github",
+      "skillPath": "skills/gsap-performance/SKILL.md",
+      "sourceCommit": "96c4b01",
+      "note": "Pinned 2026-11-05: identical to 96c4b01 and to upstream HEAD."
+    },
+    "gsap-plugins": {
+      "source": "greensock/gsap-skills",
+      "sourceType": "github",
+      "skillPath": "skills/gsap-plugins/SKILL.md",
+      "sourceCommit": "aed9cfd",
+      "note": "Updated 2026-11-05 to aed9cfd: all GSAP plugins are free, never add a Club GSAP token or .npmrc."
+    },
+    "gsap-react": {
+      "source": "greensock/gsap-skills",
+      "sourceType": "github",
+      "skillPath": "skills/gsap-react/SKILL.md",
+      "sourceCommit": "96c4b01",
+      "note": "Pinned 2026-11-05: identical to 96c4b01 and to upstream HEAD."
+    },
+    "gsap-scrolltrigger": {
+      "source": "greensock/gsap-skills",
+      "sourceType": "github",
+      "skillPath": "skills/gsap-scrolltrigger/SKILL.md",
+      "sourceCommit": "96c4b01",
+      "note": "Pinned 2026-11-05: identical to 96c4b01 and to upstream HEAD."
+    },
+    "gsap-timeline": {
+      "source": "greensock/gsap-skills",
+      "sourceType": "github",
+      "skillPath": "skills/gsap-timeline/SKILL.md",
+      "sourceCommit": "96c4b01",
+      "note": "Pinned 2026-11-05: identical to 96c4b01 and to upstream HEAD."
+    },
+    "gsap-utils": {
+      "source": "greensock/gsap-skills",
+      "sourceType": "github",
+      "skillPath": "skills/gsap-utils/SKILL.md",
+      "sourceCommit": "96c4b01",
+      "note": "Pinned 2026-11-05: identical to 96c4b01 and to upstream HEAD."
+    },
+    "impeccable": {
+      "source": "pbakaus/impeccable",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/impeccable/SKILL.md",
+      "sourceCommit": "8c7b98c",
+      "note": "Updated 2026-11-05 to v4.8 (8c7b98c, engine 0.1.18), Claude build. Security-vetted: engine checksum pinned and verified, launcher fails closed. Kit rules in SKILL-BIBLE -> 'impeccable v4.8 in the kit': PRODUCT.md/DESIGN.md derived from brief/.impeccable/art-direction; telemetry off via starter/.impeccable/config.json; live mode only with IMPECCABLE_LIVE_COPY_AGENT=chat; hook not installed; subagents not vendored."
+    },
+    "improve-animations": {
+      "source": "emilkowalski/skills",
+      "sourceType": "github",
+      "skillPath": "skills/improve-animations/SKILL.md",
+      "sourceCommit": "c8a7962",
+      "note": "RENAMED 2026-11-05 to og-improve-animations (folder + frontmatter name): a different global copy in ~/.claude/skills was hiding the kit's newer version; re-apply the rename on every update. 2026-11-05: an older global copy used to hide this skill; the global copy was moved to ~/.claude/skills-backup-2026-11-05/kit-duplicates."
+    },
+    "interaction-design": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "skillPath": "plugins/ui-design/skills/interaction-design/SKILL.md",
+      "sourceCommit": "47a5dbc",
+      "note": "Pinned 2026-11-05: SKILL.md identical to 47a5dbc and HEAD. Upstream also has references/ (animation-libraries, microinteraction-patterns, scroll-animations) not vendored; SKILL.md does not link them."
+    },
+    "interface-design": {
+      "source": "Dammyjay93/interface-design",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/interface-design/SKILL.md",
+      "sourceCommit": "2f9be32",
+      "note": "Updated 2026-11-05 to 2f9be32 (refocused on visual hierarchy; self-contained, references/ merged into SKILL.md). Its tracked-caps metric labels and resting shadows lose to kit house rules. Upstream's .claude/commands (design-review, design-deslop) not vendored. RENAMED 2026-11-05 to og-interface-design (folder + frontmatter name) so a same-named global skill can't shadow it; re-apply the frontmatter rename on every update. 2026-11-05: an older global copy used to hide this skill; the global copy was moved to ~/.claude/skills-backup-2026-11-05/kit-duplicates."
+    },
+    "mobile-native": {
+      "source": "emilkowalski/skills",
+      "sourceType": "github",
+      "skillPath": "skills/mobile-native/SKILL.md",
+      "sourceCommit": "2d22863",
+      "computedHash": "f221cea36642168df6d3d6d7f236237cbf1ae669138ff7df07775674223d49ad"
+    },
+    "og-frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "skillPath": "skills/frontend-design/SKILL.md",
+      "sourceCommit": "41bbe19",
+      "note": "Moved 2026-11-05 from anthropics/claude-code (plugin removed upstream) to anthropics/skills 41bbe19, the rewritten version. It discourages identical entrances on every section; the kit's blur-in titles + scroll reveals are a kit override. Fallback skill only. RENAMED 2026-11-05 to og-frontend-design (folder + frontmatter name) so a same-named global skill can't shadow it; re-apply the frontmatter rename on every update."
+    },
+    "pick-ui-library": {
+      "source": "emilkowalski/skills",
+      "sourceType": "github",
+      "skillPath": "skills/pick-ui-library/SKILL.md",
+      "sourceCommit": "2d22863",
+      "computedHash": "5d2a77bf0ecafbda85aa95fb49999b6d77945d9066ec83d970b62e5b388cd686"
+    },
+    "prototype": {
+      "source": "emilkowalski/skills",
+      "sourceType": "github",
+      "skillPath": "skills/prototype/SKILL.md",
+      "sourceCommit": "2d22863",
+      "computedHash": "77be567d8c946608fdd15e61b62ab383cdf289a194dce2479828b7eda860d3ba"
+    },
+    "remove-animations": {
+      "source": "emilkowalski/skills",
+      "sourceType": "github",
+      "skillPath": "skills/remove-animations/SKILL.md",
+      "sourceCommit": "c8a7962",
+      "note": "Added 2026-11-05 after a security scan (clean). Routing protects the kit's blur-in titles and scroll reveals (CLAUDE.md)."
+    },
+    "review-animations": {
+      "source": "emilkowalski/skills",
+      "sourceType": "github",
+      "skillPath": "skills/review-animations/SKILL.md",
+      "sourceCommit": "c8a7962",
+      "note": "RENAMED 2026-11-05 to og-review-animations (folder + frontmatter name): a different global copy in ~/.claude/skills was hiding the kit's newer version; re-apply the rename on every update. 2026-11-05: an older global copy used to hide this skill; the global copy was moved to ~/.claude/skills-backup-2026-11-05/kit-duplicates."
+    },
+    "schema-markup": {
+      "source": "local",
+      "sourceType": "local",
+      "skillPath": "SKILL.md",
+      "note": "Kit-authored (2026-05-19), Next.js App Router specific. NOT coreyhaines31/marketingskills `schema` (unrelated). 2026-11-05: render through an escaping <JsonLd> component (`<` -> \\u003c) to prevent </script> breakout (XSS) in CMS-edited values, per the Next.js JSON-LD guide."
+    },
+    "seo-audit": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "skillPath": "skills/seo-audit/SKILL.md",
+      "sourceCommit": "88c79f6",
+      "note": "Added 2026-11-05 (security-scanned, clean). LOCAL EDITS (re-apply on update): description drops 'page speed'/'core web vitals' and the vague 'help with SEO' trigger and points to kit equivalents; 'OG Web Design kit (read this first)' preamble (brief.md, seo-plan.md, SEO-GEO-GUIDE.md, Next.js fixes, its local-SEO refs win over the guide); references/ai-writing-detection.md removed (duplicates copywriting's ai-tells.md); References + Related Skills remapped to kit skills. References still name programmatic-seo/site-architecture/product-marketing (not vendored; harmless)."
+    },
+    "taste-app-screens": {
+      "source": "Leonxlnx/taste-skill",
+      "sourceType": "github",
+      "skillPath": "skills/taste-skill/SKILL.md",
+      "sourceCommit": "12af471",
+      "note": "v2.1.5 kept for its app-screen route (removed in v2.5). LOCAL EDIT: frontmatter name/description changed to taste-app-screens and an OG-kit note added after it; everything else identical to upstream v2.1.5.",
+      "frozen": true
+    },
+    "vercel-composition-patterns": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/composition-patterns/SKILL.md",
+      "sourceCommit": "1a2c79d",
+      "note": "Security-scanned 2026-11-05 (markdown only, no scripts). Folder renamed to match the skill's own name field."
+    },
+    "vercel-react-best-practices": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/react-best-practices/SKILL.md",
+      "sourceCommit": "1a2c79d",
+      "note": "Security-scanned 2026-11-05 (markdown only, no scripts). Folder renamed to match the skill's own name field."
+    },
+    "vercel-react-view-transitions": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/react-view-transitions/SKILL.md",
+      "sourceCommit": "1a2c79d",
+      "note": "Security-scanned 2026-11-05 (markdown only, no scripts). Folder renamed to match the skill's own name field."
+    },
+    "web-design-guidelines": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/web-design-guidelines/SKILL.md",
+      "sourceCommit": "1a2c79d",
+      "note": "Verified identical to upstream on 2026-11-05. At run time it fetches its rules from raw.githubusercontent.com/vercel-labs/web-interface-guidelines/main/command.md (live, unpinned)."
+    }
+  }
+}

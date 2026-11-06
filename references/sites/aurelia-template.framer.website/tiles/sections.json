@@ -1,0 +1,24 @@
+{
+ "url": "https://aurelia-template.framer.website/",
+ "views": {
+  "desktop": {
+   "width": 1440,
+   "height": 900,
+   "navH": 0,
+   "scrollHeight": 7327,
+   "screens": 8.14,
+   "sections": [],
+   "consoleErrors": []
+  },
+  "mobile": {
+   "width": 390,
+   "height": 844,
+   "navH": 0,
+   "scrollHeight": 9922,
+   "screens": 11.76,
+   "sections": [],
+   "consoleErrors": []
+  }
+ },
+ "at": "2026-11-06T00:23:22.468Z"
+}

@@ -1,0 +1,1003 @@
+{
+  "Images/Generic/Vlasis0033-1024x681.jpg": {
+    "file": "Images/zoes-gr-originals/Generic/Vlasis0033.jpg",
+    "new_size": [
+      1623,
+      1080
+    ],
+    "old_size": [
+      1024,
+      681
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis0033.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.38,
+      "aspect_diff": 0.0006
+    }
+  },
+  "Images/Generic/Vlasis0037-1024x592.jpg": {
+    "file": "Images/zoes-gr-originals/Generic/Vlasis0037.jpg",
+    "new_size": [
+      1869,
+      1080
+    ],
+    "old_size": [
+      1024,
+      592
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis0037.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.32,
+      "aspect_diff": 0.0005
+    }
+  },
+  "Images/Generic/Vlasis0038-1024x681.jpg": {
+    "file": "Images/zoes-gr-originals/Generic/Vlasis0038.jpg",
+    "new_size": [
+      1623,
+      1080
+    ],
+    "old_size": [
+      1024,
+      681
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis0038.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.37,
+      "aspect_diff": 0.0006
+    }
+  },
+  "Images/Generic/Vlasis0201.jpg": {
+    "file": "Images/zoes-gr-originals/Generic/Vlasis0201.jpg",
+    "new_size": [
+      721,
+      1080
+    ],
+    "old_size": [
+      721,
+      1080
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis0201.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.0,
+      "aspect_diff": 0.0
+    },
+    "note": "only available at its current size; the local copy is already the full upload (byte-identical)"
+  },
+  "Images/Generic/Vlasis0207-930x620.jpg": {
+    "file": "Images/zoes-gr-originals/Generic/Vlasis0207.jpg",
+    "new_size": [
+      1620,
+      1080
+    ],
+    "old_size": [
+      930,
+      620
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis0207.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.48,
+      "aspect_diff": 0.0
+    }
+  },
+  "Images/Generic/Vlasis0209-930x620.jpg": {
+    "file": "Images/zoes-gr-originals/Generic/Vlasis0209.jpg",
+    "new_size": [
+      1620,
+      1080
+    ],
+    "old_size": [
+      930,
+      620
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis0209.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.47,
+      "aspect_diff": 0.0
+    }
+  },
+  "Images/Generic/Vlasis0211-930x620.jpg": {
+    "file": "Images/zoes-gr-originals/Generic/Vlasis0211.jpg",
+    "new_size": [
+      1619,
+      1080
+    ],
+    "old_size": [
+      930,
+      620
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis0211.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.54,
+      "aspect_diff": 0.0006
+    }
+  },
+  "Images/Generic/Vlasis0213-1024x463.jpg": {
+    "file": "Images/zoes-gr-originals/Generic/Vlasis0213.jpg",
+    "new_size": [
+      1920,
+      868
+    ],
+    "old_size": [
+      1024,
+      463
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis0213.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.38,
+      "aspect_diff": 0.0001
+    }
+  },
+  "Images/Generic/Vlasis0214-1024x455.jpg": {
+    "file": "Images/zoes-gr-originals/Generic/Vlasis0214.jpg",
+    "new_size": [
+      1920,
+      853
+    ],
+    "old_size": [
+      1024,
+      455
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis0214.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.38,
+      "aspect_diff": 0.0001
+    }
+  },
+  "Images/Generic/Vlasis0217-930x620.jpg": {
+    "file": "Images/zoes-gr-originals/Generic/Vlasis0217.jpg",
+    "new_size": [
+      1618,
+      1080
+    ],
+    "old_size": [
+      930,
+      620
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis0217.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.51,
+      "aspect_diff": 0.0012
+    }
+  },
+  "Images/Generic/Vlasis0218-930x620.jpg": {
+    "file": "Images/zoes-gr-originals/Generic/Vlasis0218.jpg",
+    "new_size": [
+      1619,
+      1080
+    ],
+    "old_size": [
+      930,
+      620
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis0218.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.58,
+      "aspect_diff": 0.0006
+    }
+  },
+  "Images/Generic/Vlasis0220-930x620.jpg": {
+    "file": "Images/zoes-gr-originals/Generic/Vlasis0220.jpg",
+    "new_size": [
+      1619,
+      1080
+    ],
+    "old_size": [
+      930,
+      620
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis0220.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.43,
+      "aspect_diff": 0.0006
+    }
+  },
+  "Images/Superior Rooms/A-1-930x620.jpg": {
+    "file": "Images/zoes-gr-originals/Superior Rooms/A-1.jpg",
+    "new_size": [
+      1620,
+      1080
+    ],
+    "old_size": [
+      930,
+      620
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2023/04/A-1.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.07,
+      "aspect_diff": 0.0
+    }
+  },
+  "Images/Superior Rooms/A-11-930x620.jpg": {
+    "file": "Images/zoes-gr-originals/Superior Rooms/A-11.jpg",
+    "new_size": [
+      1620,
+      1080
+    ],
+    "old_size": [
+      930,
+      620
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2023/04/A-11.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.07,
+      "aspect_diff": 0.0
+    }
+  },
+  "Images/Superior Rooms/A-12.jpg": {
+    "file": "Images/zoes-gr-originals/Superior Rooms/A-12.jpg",
+    "new_size": [
+      720,
+      1080
+    ],
+    "old_size": [
+      720,
+      1080
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2023/04/A-12.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.0,
+      "aspect_diff": 0.0
+    },
+    "note": "only available at its current size; the local copy is already the full upload (byte-identical)"
+  },
+  "Images/Superior Rooms/A-14.jpg": {
+    "file": "Images/zoes-gr-originals/Superior Rooms/A-14.jpg",
+    "new_size": [
+      720,
+      1080
+    ],
+    "old_size": [
+      720,
+      1080
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2023/04/A-14.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.0,
+      "aspect_diff": 0.0
+    },
+    "note": "only available at its current size; the local copy is already the full upload (byte-identical)"
+  },
+  "Images/Superior Rooms/A-15-930x620.jpg": {
+    "file": "Images/zoes-gr-originals/Superior Rooms/A-15.jpg",
+    "new_size": [
+      1620,
+      1080
+    ],
+    "old_size": [
+      930,
+      620
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2023/04/A-15.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.07,
+      "aspect_diff": 0.0
+    }
+  },
+  "Images/Superior Rooms/A-2-930x620.jpg": {
+    "file": "Images/zoes-gr-originals/Superior Rooms/A-2.jpg",
+    "new_size": [
+      1620,
+      1080
+    ],
+    "old_size": [
+      930,
+      620
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2023/04/A-2.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.08,
+      "aspect_diff": 0.0
+    }
+  },
+  "Images/Superior Rooms/A-3-930x620.jpg": {
+    "file": "Images/zoes-gr-originals/Superior Rooms/A-3.jpg",
+    "new_size": [
+      1620,
+      1080
+    ],
+    "old_size": [
+      930,
+      620
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2023/04/A-3.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.07,
+      "aspect_diff": 0.0
+    }
+  },
+  "Images/Superior Rooms/A-4-930x620.jpg": {
+    "file": "Images/zoes-gr-originals/Superior Rooms/A-4.jpg",
+    "new_size": [
+      1620,
+      1080
+    ],
+    "old_size": [
+      930,
+      620
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2023/04/A-4.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.07,
+      "aspect_diff": 0.0
+    }
+  },
+  "Images/Superior Rooms/A-5-930x620.jpg": {
+    "file": "Images/zoes-gr-originals/Superior Rooms/A-5.jpg",
+    "new_size": [
+      1620,
+      1080
+    ],
+    "old_size": [
+      930,
+      620
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2023/04/A-5.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.06,
+      "aspect_diff": 0.0
+    }
+  },
+  "Images/Superior Rooms/A-6-930x620.jpg": {
+    "file": "Images/zoes-gr-originals/Superior Rooms/A-6.jpg",
+    "new_size": [
+      1620,
+      1080
+    ],
+    "old_size": [
+      930,
+      620
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2023/04/A-6.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.08,
+      "aspect_diff": 0.0
+    }
+  },
+  "Images/Superior Rooms/A-7-930x620.jpg": {
+    "file": "Images/zoes-gr-originals/Superior Rooms/A-7.jpg",
+    "new_size": [
+      1620,
+      1080
+    ],
+    "old_size": [
+      930,
+      620
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2023/04/A-7.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.06,
+      "aspect_diff": 0.0
+    }
+  },
+  "Images/Superior Rooms/A-9.jpg": {
+    "file": "Images/zoes-gr-originals/Superior Rooms/A-9.jpg",
+    "new_size": [
+      720,
+      1080
+    ],
+    "old_size": [
+      720,
+      1080
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2023/04/A-9.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.0,
+      "aspect_diff": 0.0
+    },
+    "note": "only available at its current size; the local copy is already the full upload (byte-identical)"
+  },
+  "Images/Superior Rooms/L1229825.webp": {
+    "file": null,
+    "old_size": [
+      1920,
+      1280
+    ],
+    "source_url": null,
+    "reason": "not on zoes.gr: no page references it, and the WP media library (169 items, newest 2023-04-26) has no L12298* or .webp upload"
+  },
+  "Images/Superior Rooms/L1229827.webp": {
+    "file": null,
+    "old_size": [
+      1920,
+      1280
+    ],
+    "source_url": null,
+    "reason": "not on zoes.gr: no page references it, and the WP media library (169 items, newest 2023-04-26) has no L12298* or .webp upload"
+  },
+  "Images/Superior Rooms/L1229833.webp": {
+    "file": null,
+    "old_size": [
+      1920,
+      1280
+    ],
+    "source_url": null,
+    "reason": "not on zoes.gr: no page references it, and the WP media library (169 items, newest 2023-04-26) has no L12298* or .webp upload"
+  },
+  "Images/Superior Rooms/L1229834.webp": {
+    "file": null,
+    "old_size": [
+      1920,
+      1280
+    ],
+    "source_url": null,
+    "reason": "not on zoes.gr: no page references it, and the WP media library (169 items, newest 2023-04-26) has no L12298* or .webp upload"
+  },
+  "Images/Swip Up Suite/Vlasis-100-1-930x620.jpg": {
+    "file": "Images/zoes-gr-originals/Swip Up Suite/Vlasis-100-1.jpg",
+    "new_size": [
+      1621,
+      1080
+    ],
+    "old_size": [
+      930,
+      620
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis-100-1.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.47,
+      "aspect_diff": 0.0006
+    }
+  },
+  "Images/Swip Up Suite/Vlasis-101b-1-930x620.jpg": {
+    "file": "Images/zoes-gr-originals/Swip Up Suite/Vlasis-101b-1.jpg",
+    "new_size": [
+      1621,
+      1080
+    ],
+    "old_size": [
+      930,
+      620
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis-101b-1.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.42,
+      "aspect_diff": 0.0006
+    }
+  },
+  "Images/Swip Up Suite/Vlasis-103-1-930x620.jpg": {
+    "file": "Images/zoes-gr-originals/Swip Up Suite/Vlasis-103-1.jpg",
+    "new_size": [
+      1501,
+      1000
+    ],
+    "old_size": [
+      930,
+      620
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis-103-1.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.47,
+      "aspect_diff": 0.0007
+    }
+  },
+  "Images/Swip Up Suite/Vlasis-105-1-930x620.jpg": {
+    "file": "Images/zoes-gr-originals/Swip Up Suite/Vlasis-105-1.jpg",
+    "new_size": [
+      1621,
+      1080
+    ],
+    "old_size": [
+      930,
+      620
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis-105-1.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.49,
+      "aspect_diff": 0.0006
+    }
+  },
+  "Images/Swip Up Suite/Vlasis-106-1-930x620.jpg": {
+    "file": "Images/zoes-gr-originals/Swip Up Suite/Vlasis-106-1.jpg",
+    "new_size": [
+      1621,
+      1080
+    ],
+    "old_size": [
+      930,
+      620
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis-106-1.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.44,
+      "aspect_diff": 0.0006
+    }
+  },
+  "Images/Swip Up Suite/Vlasis-107-1-930x620.jpg": {
+    "file": "Images/zoes-gr-originals/Swip Up Suite/Vlasis-107-1.jpg",
+    "new_size": [
+      1621,
+      1080
+    ],
+    "old_size": [
+      930,
+      620
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis-107-1.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.49,
+      "aspect_diff": 0.0006
+    }
+  },
+  "Images/Swip Up Suite/Vlasis-108-1-930x620.jpg": {
+    "file": "Images/zoes-gr-originals/Swip Up Suite/Vlasis-108-1.jpg",
+    "new_size": [
+      1620,
+      1080
+    ],
+    "old_size": [
+      930,
+      620
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis-108-1.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.48,
+      "aspect_diff": 0.0
+    }
+  },
+  "Images/Swip Up Suite/Vlasis-116-1-930x620.jpg": {
+    "file": "Images/zoes-gr-originals/Swip Up Suite/Vlasis-116-1.jpg",
+    "new_size": [
+      1621,
+      1080
+    ],
+    "old_size": [
+      930,
+      620
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis-116-1.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.46,
+      "aspect_diff": 0.0006
+    }
+  },
+  "Images/Swip Up Suite/Vlasis-118-1-930x620.jpg": {
+    "file": "Images/zoes-gr-originals/Swip Up Suite/Vlasis-118-1.jpg",
+    "new_size": [
+      1621,
+      1080
+    ],
+    "old_size": [
+      930,
+      620
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis-118-1.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.6,
+      "aspect_diff": 0.0006
+    }
+  },
+  "Images/Swip Up Suite/Vlasis-120-1-1024x639.jpg": {
+    "file": "Images/zoes-gr-originals/Swip Up Suite/Vlasis-120-1.jpg",
+    "new_size": [
+      1731,
+      1080
+    ],
+    "old_size": [
+      1024,
+      639
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis-120-1.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.46,
+      "aspect_diff": 0.0002
+    }
+  },
+  "Images/Swip Up Suite/Vlasis-121-1-1024x654.jpg": {
+    "file": "Images/zoes-gr-originals/Swip Up Suite/Vlasis-121-1.jpg",
+    "new_size": [
+      1692,
+      1080
+    ],
+    "old_size": [
+      1024,
+      654
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis-121-1.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.45,
+      "aspect_diff": 0.0006
+    }
+  },
+  "Images/Swip Up Suite/Vlasis-122-1-1024x646.jpg": {
+    "file": "Images/zoes-gr-originals/Swip Up Suite/Vlasis-122-1.jpg",
+    "new_size": [
+      1713,
+      1080
+    ],
+    "old_size": [
+      1024,
+      646
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis-122-1.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.48,
+      "aspect_diff": 0.0006
+    }
+  },
+  "Images/Swip Up Suite/Vlasis-124-1-930x620.jpg": {
+    "file": "Images/zoes-gr-originals/Swip Up Suite/Vlasis-124-1.jpg",
+    "new_size": [
+      1621,
+      1080
+    ],
+    "old_size": [
+      930,
+      620
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis-124-1.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.5,
+      "aspect_diff": 0.0006
+    }
+  },
+  "Images/Swip Up Suite/Vlasis-125-1-1024x590.jpg": {
+    "file": "Images/zoes-gr-originals/Swip Up Suite/Vlasis-125-1.jpg",
+    "new_size": [
+      1876,
+      1080
+    ],
+    "old_size": [
+      1024,
+      590
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis-125-1.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.43,
+      "aspect_diff": 0.0008
+    }
+  },
+  "Images/Swip Up Suite/Vlasis-126-1.jpg": {
+    "file": "Images/zoes-gr-originals/Swip Up Suite/Vlasis-126-1.jpg",
+    "new_size": [
+      1920,
+      1055
+    ],
+    "old_size": [
+      1920,
+      1055
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis-126-1.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.0,
+      "aspect_diff": 0.0
+    },
+    "note": "only available at its current size; the local copy is already the full upload (byte-identical)"
+  },
+  "Images/Swip Up Suite/Vlasis-1b-1-930x620.jpg": {
+    "file": "Images/zoes-gr-originals/Swip Up Suite/Vlasis-1b-1.jpg",
+    "new_size": [
+      1621,
+      1080
+    ],
+    "old_size": [
+      930,
+      620
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis-1b-1.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.46,
+      "aspect_diff": 0.0006
+    }
+  },
+  "Images/Swip Up Suite/Vlasis-50-1-1024x681.jpg": {
+    "file": "Images/zoes-gr-originals/Swip Up Suite/Vlasis-50-1.jpg",
+    "new_size": [
+      1623,
+      1080
+    ],
+    "old_size": [
+      1024,
+      681
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis-50-1.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.45,
+      "aspect_diff": 0.0006
+    }
+  },
+  "Images/Swip Up Suite/Vlasis-52-1-1024x681.jpg": {
+    "file": "Images/zoes-gr-originals/Swip Up Suite/Vlasis-52-1.jpg",
+    "new_size": [
+      1281,
+      852
+    ],
+    "old_size": [
+      1024,
+      681
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis-52-1.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.4,
+      "aspect_diff": 0.0001
+    }
+  },
+  "Images/Swip Up Suite/Vlasis-53-1-1024x628.jpg": {
+    "file": "Images/zoes-gr-originals/Swip Up Suite/Vlasis-53-1.jpg",
+    "new_size": [
+      1700,
+      1043
+    ],
+    "old_size": [
+      1024,
+      628
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis-53-1.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.38,
+      "aspect_diff": 0.0004
+    }
+  },
+  "Images/Swip Up Suite/Vlasis-54-1-1024x681.jpg": {
+    "file": "Images/zoes-gr-originals/Swip Up Suite/Vlasis-54-1.jpg",
+    "new_size": [
+      1581,
+      1052
+    ],
+    "old_size": [
+      1024,
+      681
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis-54-1.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.39,
+      "aspect_diff": 0.0005
+    }
+  },
+  "Images/Swip Up Suite/Vlasis-55-1-1024x681.jpg": {
+    "file": "Images/zoes-gr-originals/Swip Up Suite/Vlasis-55-1.jpg",
+    "new_size": [
+      1623,
+      1080
+    ],
+    "old_size": [
+      1024,
+      681
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis-55-1.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.35,
+      "aspect_diff": 0.0006
+    }
+  },
+  "Images/Swip Up Suite/Vlasis-57-1-1024x681.jpg": {
+    "file": "Images/zoes-gr-originals/Swip Up Suite/Vlasis-57-1.jpg",
+    "new_size": [
+      1623,
+      1080
+    ],
+    "old_size": [
+      1024,
+      681
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis-57-1.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.52,
+      "aspect_diff": 0.0006
+    }
+  },
+  "Images/Swip Up Suite/Vlasis-6-4-930x620.jpg": {
+    "file": "Images/zoes-gr-originals/Swip Up Suite/Vlasis-6-4.jpg",
+    "new_size": [
+      1621,
+      1080
+    ],
+    "old_size": [
+      930,
+      620
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis-6-4.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.47,
+      "aspect_diff": 0.0006
+    }
+  },
+  "Images/Swip Up Suite/Vlasis-63-1-1024x681.jpg": {
+    "file": "Images/zoes-gr-originals/Swip Up Suite/Vlasis-63-1.jpg",
+    "new_size": [
+      1623,
+      1080
+    ],
+    "old_size": [
+      1024,
+      681
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis-63-1.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.41,
+      "aspect_diff": 0.0006
+    }
+  },
+  "Images/Swip Up Suite/Vlasis-68-1-1024x560.jpg": {
+    "file": "Images/zoes-gr-originals/Swip Up Suite/Vlasis-68-1.jpg",
+    "new_size": [
+      1700,
+      930
+    ],
+    "old_size": [
+      1024,
+      560
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis-68-1.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.46,
+      "aspect_diff": 0.0003
+    }
+  },
+  "Images/Swip Up Suite/Vlasis-69-1-1024x681.jpg": {
+    "file": "Images/zoes-gr-originals/Swip Up Suite/Vlasis-69-1.jpg",
+    "new_size": [
+      1623,
+      1080
+    ],
+    "old_size": [
+      1024,
+      681
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis-69-1.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.37,
+      "aspect_diff": 0.0006
+    }
+  },
+  "Images/Swip Up Suite/Vlasis-71b-1-1024x518.jpg": {
+    "file": "Images/zoes-gr-originals/Swip Up Suite/Vlasis-71b-1.jpg",
+    "new_size": [
+      1588,
+      804
+    ],
+    "old_size": [
+      1024,
+      518
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis-71b-1.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.41,
+      "aspect_diff": 0.0009
+    }
+  },
+  "Images/Swip Up Suite/Vlasis-74-1-1024x681.jpg": {
+    "file": "Images/zoes-gr-originals/Swip Up Suite/Vlasis-74-1.jpg",
+    "new_size": [
+      1623,
+      1080
+    ],
+    "old_size": [
+      1024,
+      681
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis-74-1.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.39,
+      "aspect_diff": 0.0006
+    }
+  },
+  "Images/Swip Up Suite/Vlasis-76-1-930x620.jpg": {
+    "file": "Images/zoes-gr-originals/Swip Up Suite/Vlasis-76-1.jpg",
+    "new_size": [
+      1564,
+      1041
+    ],
+    "old_size": [
+      930,
+      620
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis-76-1.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.55,
+      "aspect_diff": 0.0016
+    }
+  },
+  "Images/Swip Up Suite/Vlasis-77-1-1024x626.jpg": {
+    "file": "Images/zoes-gr-originals/Swip Up Suite/Vlasis-77-1.jpg",
+    "new_size": [
+      1700,
+      1040
+    ],
+    "old_size": [
+      1024,
+      626
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis-77-1.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.36,
+      "aspect_diff": 0.0007
+    }
+  },
+  "Images/Swip Up Suite/Vlasis-78-1-1024x577.jpg": {
+    "file": "Images/zoes-gr-originals/Swip Up Suite/Vlasis-78-1.jpg",
+    "new_size": [
+      1465,
+      825
+    ],
+    "old_size": [
+      1024,
+      577
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis-78-1.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.37,
+      "aspect_diff": 0.0006
+    }
+  },
+  "Images/Swip Up Suite/Vlasis-80-1-1024x681.jpg": {
+    "file": "Images/zoes-gr-originals/Swip Up Suite/Vlasis-80-1.jpg",
+    "new_size": [
+      1623,
+      1080
+    ],
+    "old_size": [
+      1024,
+      681
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis-80-1.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.45,
+      "aspect_diff": 0.0006
+    }
+  },
+  "Images/Swip Up Suite/Vlasis-81-1-1024x681.jpg": {
+    "file": "Images/zoes-gr-originals/Swip Up Suite/Vlasis-81-1.jpg",
+    "new_size": [
+      1623,
+      1080
+    ],
+    "old_size": [
+      1024,
+      681
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis-81-1.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.44,
+      "aspect_diff": 0.0006
+    }
+  },
+  "Images/Swip Up Suite/Vlasis-82-1-1024x642.jpg": {
+    "file": "Images/zoes-gr-originals/Swip Up Suite/Vlasis-82-1.jpg",
+    "new_size": [
+      1645,
+      1031
+    ],
+    "old_size": [
+      1024,
+      642
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis-82-1.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.42,
+      "aspect_diff": 0.0003
+    }
+  },
+  "Images/Swip Up Suite/Vlasis-83-1-1024x681.jpg": {
+    "file": "Images/zoes-gr-originals/Swip Up Suite/Vlasis-83-1.jpg",
+    "new_size": [
+      1623,
+      1080
+    ],
+    "old_size": [
+      1024,
+      681
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis-83-1.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.39,
+      "aspect_diff": 0.0006
+    }
+  },
+  "Images/Swip Up Suite/Vlasis-84-1-1024x681.jpg": {
+    "file": "Images/zoes-gr-originals/Swip Up Suite/Vlasis-84-1.jpg",
+    "new_size": [
+      1589,
+      1057
+    ],
+    "old_size": [
+      1024,
+      681
+    ],
+    "source_url": "https://zoes.gr/wp-content/uploads/2020/12/Vlasis-84-1.jpg",
+    "verified": {
+      "thumb_mean_abs_diff_0_255": 0.49,
+      "aspect_diff": 0.0002
+    }
+  }
+}

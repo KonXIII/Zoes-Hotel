@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Room Tour · Zoe's Hotel</title>
+<meta name="description" content="Prototype walk-through of the Swim-Up Suite and Superior Room at Zoe's Hotel &amp; Suites, Faliraki, built only from the hotel's own photographs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300..700&family=Noto+Serif+Display:ital,wght@0,400..500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --limestone:#F3F1EB; --limestone-2:#EFE8DB; --ink:#22261E; --ink-soft:#6B5D4E;
+    --teal:#4E5A33; --teal-ink:#145159; --line:rgba(46,36,27,.14);
+    --stage-bg:#22261E;
+    --ease:cubic-bezier(.22,.61,.36,1);
+    --serif:"Noto Serif Display", Georgia, serif; --sans:"Manrope", system-ui, sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%}
+  body{background:var(--limestone);color:var(--ink);font:400 15px/1.5 var(--sans);-webkit-font-smoothing:antialiased;display:flex;flex-direction:column;min-height:100svh}
+  button{font:inherit;color:inherit;cursor:pointer}
+  :focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+
+  /* ---------- header ---------- */
+  header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px clamp(16px,3vw,32px)}
+  .brand{font-family:var(--serif);font-size:20px;letter-spacing:.01em;line-height:1.1}
+  .brand small{display:block;font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-top:3px}
+  .rooms{display:flex;gap:4px;background:var(--limestone-2);padding:4px;border-radius:999px}
+  .rooms button{border:0;background:transparent;padding:8px 14px;border-radius:999px;font-size:13px;font-weight:500;color:var(--ink-soft);transition:background .25s var(--ease),color .25s var(--ease)}
+  .rooms button[aria-pressed="true"]{background:var(--limestone);color:var(--ink);box-shadow:0 1px 2px rgba(46,36,27,.12)}
+
+  /* ---------- stage ---------- */
+  main{flex:1;display:flex;flex-direction:column;padding:0 clamp(0px,3vw,32px)}
+  .stage{position:relative;overflow:hidden;background:var(--stage-bg);border-radius:clamp(0px,1.2vw,14px);
+         height:min(calc(100svh - 230px), 64vw);min-height:340px;touch-action:pan-y;user-select:none;-webkit-user-select:none}
+  .layer{position:absolute;inset:0;will-change:opacity,transform}
+  .frame{position:absolute;left:50%;top:50%;will-change:transform}
+  .kb{position:absolute;inset:0;transform-origin:var(--fx,50%) var(--fy,50%)}
+  .stage.moving .kb{animation:kb 26s ease-in-out infinite alternate}
+  @keyframes kb{from{transform:scale(1)}to{transform:scale(1.065)}}
+  .kb img{position:absolute;inset:0;width:100%;height:100%;display:block;-webkit-user-drag:none;pointer-events:none}
+  .kb img.light{transition:opacity .7s ease-in-out}
+
+  .hs{position:absolute;transform:translate(-50%,-50%);border:0;background:none;padding:0;width:44px;height:44px;display:grid;place-items:center;z-index:2}
+  .hs .dot{width:18px;height:18px;border-radius:50%;background:rgba(248,244,236,.92);box-shadow:0 0 0 5px rgba(29,108,119,.55),0 2px 10px rgba(0,0,0,.35);transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
+  .stage.moving .hs .dot{animation:pulse 2.8s var(--ease) infinite}
+  @keyframes pulse{0%,100%{box-shadow:0 0 0 5px rgba(29,108,119,.55),0 2px 10px rgba(0,0,0,.35)}50%{box-shadow:0 0 0 10px rgba(29,108,119,.18),0 2px 10px rgba(0,0,0,.35)}}
+  .hs .tag{position:absolute;left:50%;bottom:calc(100% - 4px);transform:translate(-50%,4px);white-space:nowrap;background:var(--limestone);color:var(--ink);font-size:12.5px;font-weight:500;padding:5px 10px;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.22);opacity:0;pointer-events:none;transition:opacity .2s var(--ease),transform .2s var(--ease)}
+  .hs:hover .dot,.hs:focus-visible .dot{transform:scale(1.15);background:#fff}
+  .hs:hover .tag,.hs:focus-visible .tag,.stage.labels .hs .tag{opacity:1;transform:translate(-50%,0)}
+  .hs:focus-visible{outline:none}
+  .hs:focus-visible .dot{box-shadow:0 0 0 3px var(--limestone),0 0 0 6px var(--teal)}
+
+  .overlay-btn{position:absolute;z-index:5;border:0;border-radius:999px;background:rgba(248,244,236,.94);color:var(--ink);padding:9px 14px;font-size:13px;font-weight:500;display:inline-flex;align-items:center;gap:8px;box-shadow:0 4px 14px rgba(0,0,0,.2)}
+  .overlay-btn svg{width:14px;height:14px}
+  .nav{top:50%;transform:translateY(-50%);width:44px;height:44px;padding:0;justify-content:center}
+  .nav.prev{left:12px}.nav.next{right:12px}
+  .back{left:12px;top:12px}
+  .play{right:12px;top:12px}
+  .play[aria-pressed="true"]{background:var(--teal);color:var(--limestone)}
+  .film-btn{left:50%;bottom:14px;transform:translateX(-50%);background:var(--teal);color:var(--limestone)}
+  .film-btn[hidden],.back[hidden]{display:none}
+
+  .light-ctl{position:absolute;z-index:5;left:50%;bottom:14px;transform:translateX(-50%);background:rgba(248,244,236,.94);border-radius:999px;padding:8px 16px;display:flex;align-items:center;gap:12px;font-size:12.5px;font-weight:500;box-shadow:0 4px 14px rgba(0,0,0,.2)}
+  .light-ctl input{accent-color:var(--teal);width:min(42vw,220px)}
+  .light-ctl[hidden]{display:none}
+
+  .hint{position:absolute;z-index:4;left:50%;top:14px;transform:translateX(-50%);font-size:12px;color:var(--limestone);background:rgba(46,36,27,.55);padding:5px 11px;border-radius:999px;pointer-events:none;transition:opacity .6s}
+
+  .video-wrap{position:absolute;inset:0;z-index:8;background:var(--stage-bg);display:flex;align-items:center;justify-content:center}
+  .video-wrap[hidden]{display:none}
+  .video-wrap video{width:100%;height:100%;object-fit:contain}
+  .video-wrap .ai-note{position:absolute;left:12px;bottom:12px;max-width:min(520px,calc(100% - 24px));font-size:12px;line-height:1.4;color:var(--limestone);background:rgba(46,36,27,.7);padding:7px 11px;border-radius:8px}
+  .video-wrap .close{right:12px;top:12px}
+
+  /* ---------- caption + film strip ---------- */
+  .below{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 24px;align-items:end;padding:16px clamp(16px,0vw,0px) 6px}
+  .caption h1{font-family:var(--serif);font-weight:400;font-size:clamp(24px,2.6vw,32px);line-height:1.1;margin:0}
+  .caption p{margin:4px 0 0;color:var(--ink-soft);max-width:60ch}
+  .counter{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);white-space:nowrap}
+  .strip{display:flex;gap:8px;overflow-x:auto;padding:10px clamp(16px,0vw,0px) 18px;scroll-snap-type:x proximity;scrollbar-width:thin}
+  .strip button{flex:0 0 auto;width:84px;aspect-ratio:3/2;border:0;padding:0;border-radius:6px;overflow:hidden;position:relative;scroll-snap-align:center;opacity:.62;transition:opacity .25s var(--ease),transform .25s var(--ease);background:var(--limestone-2)}
+  .strip button img{width:100%;height:100%;object-fit:cover;display:block}
+  .strip button:hover{opacity:.9}
+  .strip button[aria-current="true"]{opacity:1;box-shadow:0 0 0 2px var(--limestone),0 0 0 4px var(--teal)}
+  .strip button .n{position:absolute;left:4px;top:3px;font-size:10px;font-weight:600;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+  footer{padding:0 clamp(16px,3vw,32px) 18px;font-size:12px;color:var(--ink-soft)}
+  footer kbd{font:500 11px var(--sans);border:1px solid var(--line);border-radius:4px;padding:0 5px;background:var(--limestone-2)}
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+  @media (max-width:720px){
+    header{flex-wrap:wrap;padding:12px 16px}
+    .brand{font-size:18px}
+    .rooms{width:100%}
+    .rooms button{flex:1}
+    .stage{height:min(62svh,560px);border-radius:0}
+    .below{grid-template-columns:1fr;padding:14px 16px 2px}
+    .counter{order:-1}
+    .strip{padding:8px 16px 14px}
+    .strip button{width:72px}
+    .nav{width:40px;height:40px}
+    .nav.prev{left:8px}.nav.next{right:8px}
+    .keys{display:none}
+    main{padding:0}
+    .hint{top:auto;bottom:72px}
+  }
+  @media (hover:none){ .hs .tag{opacity:1;transform:translate(-50%,0)} }
+  @media (prefers-reduced-motion:reduce){
+    .stage .kb{animation:none!important}
+    .hs .dot{animation:none!important}
+    .kb img.light{transition:none}
+  }
+  /* embed mode (website room pages): no header */
+  html.embed header{display:none}
+  html.embed main{padding:0}
+  html.embed .stage{height:calc(100svh - 150px);border-radius:0}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">Zoe's Hotel &amp; Suites<small>Faliraki · Rhodes · Room tour</small></div>
+  <nav class="rooms" aria-label="Choose a room">
+    <button type="button" data-room="suite" aria-pressed="true">Swim-Up Suite</button>
+    <button type="button" data-room="superior" aria-pressed="false">Superior Room</button>
+  </nav>
+</header>
+
+<main>
+  <section class="stage moving" id="stage" aria-roledescription="room tour" aria-label="Room tour viewer">
+    <span class="hint" id="hint">Tap a dot to walk through the room</span>
+    <button class="overlay-btn back" id="back" type="button" hidden aria-label="Back to previous view">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 3 5 8l5 5"/></svg>Back</button>
+    <button class="overlay-btn play" id="play" type="button" aria-pressed="false">
+      <svg viewBox="0 0 16 16" fill="currentColor" id="playIcon"><path d="M4 2.5v11l9-5.5z"/></svg><span id="playLabel">Guided tour</span></button>
+    <button class="overlay-btn nav prev" id="prev" type="button" aria-label="Previous view">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 3 5 8l5 5"/></svg></button>
+    <button class="overlay-btn nav next" id="next" type="button" aria-label="Next view">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m6 3 5 5-5 5"/></svg></button>
+    <button class="overlay-btn film-btn" id="filmBtn" type="button" hidden>
+      <svg viewBox="0 0 16 16" fill="currentColor"><path d="M4 2.5v11l9-5.5z"/></svg><span id="filmLabel">Watch the walk-in</span></button>
+    <div class="light-ctl" id="lightCtl" hidden>
+      <span>Late afternoon</span>
+      <input type="range" id="light" min="0" max="2" step="1" value="0" aria-label="Time of day: late afternoon, dusk or night" aria-valuetext="Late afternoon">
+      <span>Night</span>
+    </div>
+    <div class="video-wrap" id="videoWrap" hidden>
+      <video id="video" playsinline muted preload="none"></video>
+      <p class="ai-note" id="aiNote"></p>
+      <button class="overlay-btn close" id="closeVideo" type="button">Close ✕</button>
+    </div>
+  </section>
+
+  <div class="below">
+    <div class="caption" aria-live="polite">
+      <h1 id="title"></h1>
+      <p id="note"></p>
+    </div>
+    <div class="counter" id="counter"></div>
+  </div>
+  <div class="strip" id="strip" role="list" aria-label="All views in this room"></div>
+</main>
+
+<footer>
+  Prototype. Every view is one of the hotel's real photographs; nothing in the rooms has been added or changed. Not a true 360° tour.
+  <span class="keys"> · Keys: <kbd>←</kbd> <kbd>→</kbd> move · <kbd>Space</kbd> guided tour · <kbd>1</kbd> <kbd>2</kbd> rooms · <kbd>L</kbd> show labels</span>
+</footer>
+
+<script>
+/* ===================== Tour data =====================
+   x / y are percentages of the photo's width / height.
+   Every hotspot points at something that is actually visible in the photo. */
+const P = 'media/photos/';
+const SCENES = {
+  /* ---------- Swim-Up Suite ---------- */
+  'suite-room': { img:'suite-room', w:1623, h:1080, src:'Vlasis-50',
+    title:'Step inside the Swim-Up Suite',
+    note:'Bed to the right, oak shelf and round mirror to the left, and the veranda straight ahead.',
+    focus:[45,50],
+    film:{src:'media/video/suite-walk-in.mp4', poster:'media/video/suite-walk-in-poster.webp', label:'Watch the walk-in',
+          note:'AI-animated camera move made from this one photo (Kling 3.0). The camera motion is generated; what it reveals matches the hotel’s own photos (compare “Sofa corner”).'},
+    hs:[ {x:76,y:68,to:'suite-bed',label:'The bed'},
+         {x:55,y:50,to:'suite-sofa',label:'Sofa corner'},
+         {x:41,y:44,to:'suite-veranda-day',label:'Veranda & pool'},
+         {x:9,y:30,to:'suite-mirror',label:'Round mirror'} ]},
+  'suite-bed': { img:'suite-bed', w:1581, h:1052, src:'Vlasis-54',
+    title:'Oak-slat headboard',
+    note:'Teal cushions, reading lights on either side, and the geometric screen in front of the sofa corner.',
+    focus:[50,55],
+    hs:[ {x:5,y:57,to:'suite-sofa',label:'Sofa corner'} ]},
+  'suite-sofa': { img:'suite-sofa', w:1281, h:852, src:'Vlasis-52',
+    title:'Sofa corner',
+    note:'A deep sofa beside the sliding door to the veranda.',
+    focus:[45,50],
+    hs:[ {x:18,y:38,to:'suite-veranda-day',label:'Out to the veranda'} ]},
+  'suite-entry': { img:'suite-entry', w:1623, h:1080, src:'Vlasis-83',
+    title:'Looking back to the door',
+    note:'The sofa, the bed behind its half wall, and the entrance.',
+    focus:[55,55],
+    hs:[ {x:20,y:68,to:'suite-sofa',label:'Sofa corner'},
+         {x:60,y:66,to:'suite-bed',label:'The bed'},
+         {x:96,y:42,to:'suite-mirror',label:'Mirror & shelf'} ]},
+  'suite-mirror': { img:'suite-mirror', w:1600, h:879, src:'Vlasis-126',
+    title:'Mirror and shelf at dusk',
+    note:'The round mirror reflects the bed; the veranda door is on the right.',
+    focus:[55,50],
+    hs:[ {x:25,y:57,to:'suite-bed',label:'The bed (in the mirror)'},
+         {x:95,y:52,to:'suite-veranda-dusk',label:'Veranda at dusk'} ]},
+  'suite-dusk': { img:'suite-dusk-1', w:1731, h:1080, src:'Vlasis-120, 121, 122',
+    title:'As the light drops',
+    note:'Three real photographs of the same view, taken as evening falls. Move the slider.',
+    focus:[45,50],
+    light:['suite-dusk-1','suite-dusk-2','suite-dusk-3'],
+    hs:[ {x:45,y:50,to:'suite-pool-night',label:'The pool at night'} ]},
+  'suite-bath': { img:'suite-bath', w:1589, h:1057, src:'Vlasis-84',
+    title:'Bathroom',
+    note:'Wave-pattern tiles and a vessel basin.',
+    focus:[40,55],
+    hs:[ {x:40,y:82,to:'suite-basin',label:'The basin'},
+         {x:31,y:32,to:'suite-shower',label:'Rain shower (in the mirror)'} ]},
+  'suite-basin': { img:'suite-basin', w:1501, h:1000, src:'Vlasis-103',
+    title:'Wave-tile basin', note:'Fresh towels and a wall-mounted tap.', focus:[55,55], hs:[] },
+  'suite-shower': { img:'suite-shower', w:1623, h:1080, src:'Vlasis-57',
+    title:'Walk-in rain shower', note:'Glass screen, rain head and a window for daylight.', focus:[60,45], hs:[] },
+  'suite-kettle': { img:'suite-kettle', w:1621, h:1080, src:'Vlasis-118',
+    title:'Coffee and tea', note:'Kettle, cups and glasses on the tray.', focus:[50,50], hs:[] },
+  'suite-veranda-day': { img:'suite-veranda-day', w:1620, h:1080, src:'Vlasis-108',
+    title:'Your veranda on the pool',
+    note:'Loungers outside the door and steps straight down into the swim-up pool.',
+    focus:[50,40],
+    film:{src:'media/video/suite-veranda.mp4', poster:'media/video/suite-veranda-poster.webp', label:'Watch the pool glide',
+          note:'AI-animated camera move made from this one photo (Kling 3.0). The camera motion and water ripples are generated; nothing has been added to the veranda.'},
+    hs:[ {x:30,y:72,to:'suite-pool-long',label:'Along the pool'} ]},
+  'suite-pool-long': { img:'suite-pool-long', w:1621, h:1080, src:'Vlasis-6-4',
+    title:'The swim-up pool', note:'The pool runs the length of the ground-floor suites.', focus:[60,55], hs:[] },
+  'suite-veranda-dusk': { img:'suite-veranda-dusk', w:1564, h:1041, src:'Vlasis-76',
+    title:'The veranda at dusk',
+    note:'Looking back into the suites from the water as the lights come on.',
+    focus:[50,45],
+    hs:[ {x:22,y:32,to:'suite-mirror',label:'Through the glass'},
+         {x:55,y:80,to:'suite-pool-night',label:'The pool at night'} ]},
+  'suite-pool-night': { img:'suite-pool-night', w:1623, h:1080, src:'Vlasis-74',
+    title:'By night', note:'The pool lit up after dark.', focus:[50,55], hs:[] },
+
+  /* ---------- Superior Room ---------- */
+  'sup-room': { img:'sup-room', w:1620, h:1080, src:'A-1',
+    title:'The Superior Room',
+    note:'Oak headboard, teal cushions and a balcony with a view of the hills.',
+    focus:[50,55],
+    hs:[ {x:30,y:66,to:'sup-bed',label:'The bed'},
+         {x:66,y:55,to:'sup-sofa',label:'Sitting corner & balcony'},
+         {x:8,y:38,to:'sup-lamp',label:'Reading lamp'} ]},
+  'sup-bed': { img:'sup-bed', w:1600, h:1067, src:'L1229827',
+    title:'Oak headboard',
+    note:'Two reading lamps, bedside tables and the slatted oak screen.',
+    focus:[50,50],
+    hs:[ {x:18,y:33,to:'sup-lamp',label:'Reading lamp'} ]},
+  'sup-desk': { img:'sup-desk', w:1620, h:1080, src:'A-2',
+    title:'Desk and balcony',
+    note:'A long oak desk under the mirror, with the balcony door beyond.',
+    focus:[55,50],
+    hs:[ {x:78,y:63,to:'sup-vanity',label:'Desk & mirror'},
+         {x:48,y:52,to:'sup-sofa',label:'Balcony'},
+         {x:18,y:72,to:'sup-bed',label:'The bed'} ]},
+  'sup-vanity': { img:'sup-vanity', w:1620, h:1080, src:'A-5',
+    title:'Mirror and oak desk',
+    note:'Hairdryer, mirror and a bench; the coffee corner is on the right.',
+    focus:[50,55],
+    hs:[ {x:90,y:55,to:'sup-kettle',label:'Coffee & minibar'},
+         {x:33,y:62,to:'sup-bed',label:'The bed (in the mirror)'} ]},
+  'sup-kettle': { img:'sup-kettle', w:1620, h:1080, src:'A-3',
+    title:'Coffee corner',
+    note:'Kettle, glasses and minibar in an oak niche, with a bench by the door.',
+    focus:[60,55],
+    hs:[ {x:38,y:57,to:'sup-desk',label:'The desk'},
+         {x:5,y:45,to:'sup-sofa',label:'Balcony'} ]},
+  'sup-entry': { img:'sup-entry', w:1620, h:1080, src:'A-4',
+    title:'From the door',
+    note:'The entrance, the air-conditioning unit and the bed.',
+    focus:[55,55],
+    hs:[ {x:72,y:66,to:'sup-bed',label:'The bed'},
+         {x:4,y:40,to:'sup-kettle',label:'Coffee corner'} ]},
+  'sup-sofa': { img:'sup-sofa', w:1600, h:1067, src:'L1229825',
+    title:'Sofa corner',
+    note:'A corner sofa under the feather wall art, beside the balcony door.',
+    focus:[45,55], hs:[] },
+  'sup-bath': { img:'sup-bath', w:1620, h:1080, src:'A-7',
+    title:'Shower room', note:'Walk-in rain shower behind a glass screen.', focus:[50,50], hs:[] },
+  'sup-lamp': { img:'sup-lamp', w:1620, h:1080, src:'A-11',
+    title:'Reading lamp', note:'A small detail by the bed.', focus:[50,50], hs:[] },
+};
+const ROOMS = {
+  suite:   { name:'Swim-Up Suite', order:['suite-room','suite-bed','suite-sofa','suite-entry','suite-mirror','suite-dusk','suite-bath','suite-basin','suite-shower','suite-kettle','suite-veranda-day','suite-pool-long','suite-veranda-dusk','suite-pool-night'] },
+  superior:{ name:'Superior Room', order:['sup-room','sup-bed','sup-desk','sup-vanity','sup-kettle','sup-entry','sup-sofa','sup-bath','sup-lamp'] },
+};
+
+/* ===================== Viewer ===================== */
+const $ = s => document.querySelector(s);
+const stage = $('#stage'), strip = $('#strip');
+const mq = matchMedia('(prefers-reduced-motion: reduce)');
+let reduced = mq.matches;
+mq.addEventListener?.('change', e => { reduced = e.matches; stage.classList.toggle('moving', !reduced); });
+stage.classList.toggle('moving', !reduced);
+
+let room = 'suite', current = null, layer = null, busy = false, trail = [];
+let pan = {x:0,y:0}, par = {x:0,y:0}, parT = {x:0,y:0}, bounds = {x:0,y:0};
+let tourTimer = null;
+const sceneRoom = id => id.startsWith('suite') ? 'suite' : 'superior';
+
+function buildLayer(id){
+  const s = SCENES[id];
+  const el = document.createElement('div'); el.className = 'layer';
+  const frame = document.createElement('div'); frame.className = 'frame';
+  const kb = document.createElement('div'); kb.className = 'kb';
+  kb.style.setProperty('--fx', s.focus[0] + '%'); kb.style.setProperty('--fy', s.focus[1] + '%');
+  const imgs = s.light || [s.img];
+  imgs.forEach((name, i) => {
+    const im = new Image(); im.src = P + name + '.webp'; im.alt = i ? '' : s.title; im.decoding = 'async'; im.draggable = false;
+    if (s.light){ im.className = 'light'; im.style.opacity = i ? 0 : 1; }
+    kb.appendChild(im);
+  });
+  s.hs.forEach(h => {
+    const b = document.createElement('button'); b.type = 'button'; b.className = 'hs';
+    b.style.left = h.x + '%'; b.style.top = h.y + '%';
+    b.setAttribute('aria-label', 'Go to: ' + h.label);
+    b.innerHTML = '<span class="dot"></span><span class="tag">' + h.label + '</span>';
+    b.addEventListener('click', e => { e.stopPropagation(); stopTour(); go(h.to, {via:b}); });
+    b.addEventListener('focus', () => revealPoint(h.x, h.y));
+    kb.appendChild(b);
+  });
+  frame.appendChild(kb); el.appendChild(frame);
+  el._frame = frame; el._imgs = [...kb.querySelectorAll('img')]; el._id = id;
+  return el;
+}
+
+function fit(el){
+  const s = SCENES[el._id], sw = stage.clientWidth, sh = stage.clientHeight;
+  const scale = Math.max(sw / s.w, sh / s.h) * (reduced ? 1 : 1.03);
+  const fw = s.w * scale, fh = s.h * scale;
+  Object.assign(el._frame.style, {width: fw + 'px', height: fh + 'px', marginLeft: -fw/2 + 'px', marginTop: -fh/2 + 'px'});
+  bounds = {x: Math.max(0, (fw - sw) / 2), y: Math.max(0, (fh - sh) / 2)};
+  return {fw, fh};
+}
+function centerOn(el, fx, fy){
+  const s = SCENES[el._id], {fw, fh} = fit(el);
+  pan.x = clamp(-(fx/100 - .5) * fw, bounds.x); pan.y = clamp(-(fy/100 - .5) * fh, bounds.y);
+}
+function revealPoint(x, y){ if (!layer) return; const {fw, fh} = fit(layer);
+  const sx = (x/100 - .5) * fw + pan.x, sy = (y/100 - .5) * fh + pan.y;
+  const mx = stage.clientWidth/2 - 60, my = stage.clientHeight/2 - 60;
+  if (Math.abs(sx) > mx) pan.x = clamp(pan.x - (sx - Math.sign(sx)*mx), bounds.x);
+  if (Math.abs(sy) > my) pan.y = clamp(pan.y - (sy - Math.sign(sy)*my), bounds.y);
+}
+const clamp = (v, b) => Math.max(-b, Math.min(b, v));
+
+function applyTransform(){
+  if (layer){
+    par.x += (parT.x - par.x) * .08; par.y += (parT.y - par.y) * .08;
+    const x = clamp(pan.x + par.x, bounds.x), y = clamp(pan.y + par.y, bounds.y);
+    layer._frame.style.transform = `translate3d(${x}px,${y}px,0)`;
+  }
+  requestAnimationFrame(applyTransform);
+}
+requestAnimationFrame(applyTransform);
+
+async function go(id, {via=null, push=true} = {}){
+  if (busy || id === current) return;
+  busy = true;
+  const s = SCENES[id];
+  const next = buildLayer(id);
+  next.style.opacity = 0;
+  stage.prepend(next);
+  try { await Promise.all(next._imgs.slice(0,1).map(i => i.decode())); } catch(e){}
+  const old = layer;
+  if (push && current) trail.push(current);
+  layer = next; centerOn(next, s.focus[0], s.focus[1]);
+  if (old) old.style.pointerEvents = 'none';
+
+  if (old && !reduced){
+    let ox = stage.clientWidth/2, oy = stage.clientHeight/2;
+    if (via){ const r = via.getBoundingClientRect(), sr = stage.getBoundingClientRect(); ox = r.left + r.width/2 - sr.left; oy = r.top + r.height/2 - sr.top; }
+    old.style.transformOrigin = `${ox}px ${oy}px`;
+    const zoom = via ? 1.55 : 1.0;
+    old.animate([{transform:'scale(1)', opacity:1, filter:'blur(0px)'},{transform:`scale(${zoom})`, opacity:0, filter: via ? 'blur(3px)' : 'blur(0px)'}],
+                {duration: via ? 950 : 600, easing:'cubic-bezier(.45,0,.2,1)', fill:'forwards'});
+    await next.animate([{transform: via ? 'scale(1.12)' : 'scale(1.02)', opacity:0},{transform:'scale(1)', opacity:1}],
+                {duration: via ? 900 : 600, delay: via ? 280 : 0, easing:'cubic-bezier(.22,.61,.36,1)', fill:'forwards'}).finished;
+  } else if (old){
+    await next.animate([{opacity:0},{opacity:1}], {duration:180, fill:'forwards'}).finished;
+  } else {
+    await next.animate([{opacity:0},{opacity:1}], {duration: reduced ? 0 : 500, fill:'forwards'}).finished;
+  }
+  next.style.opacity = 1; next.getAnimations().forEach(a => { a.commitStyles?.(); a.cancel(); });
+  old?.remove();
+  current = id; busy = false;
+  if (sceneRoom(id) !== room) setRoom(sceneRoom(id), false);
+  updateUI();
+  preload(id);
+  location.replace('#' + id);
+}
+
+function preload(id){
+  const s = SCENES[id], ord = ROOMS[sceneRoom(id)].order, i = ord.indexOf(id);
+  const ids = new Set([...s.hs.map(h => h.to), ord[i+1], ord[i-1]].filter(Boolean));
+  ids.forEach(n => (SCENES[n].light || [SCENES[n].img]).forEach(m => { const im = new Image(); im.src = P + m + '.webp'; }));
+}
+
+function updateUI(){
+  const s = SCENES[current], ord = ROOMS[room].order, i = ord.indexOf(current);
+  $('#title').textContent = s.title;
+  $('#note').textContent = s.note;
+  $('#counter').textContent = `${ROOMS[room].name} · ${i+1} / ${ord.length}`;
+  $('#back').hidden = !trail.length;
+  [...strip.children].forEach(b => b.setAttribute('aria-current', b.dataset.id === current));
+  strip.querySelector('[aria-current="true"]')?.scrollIntoView({block:'nearest', inline:'center', behavior: reduced ? 'auto' : 'smooth'});
+  // light slider
+  const lc = $('#lightCtl'); lc.hidden = !s.light; if (s.light) $('#light').value = 0;
+  // film
+  const fb = $('#filmBtn'); fb.hidden = true;
+  if (s.film){ fb.hidden = false; $('#filmLabel').textContent = s.film.label; }
+}
+
+function setRoom(r, navigate = true){
+  room = r;
+  document.querySelectorAll('.rooms button').forEach(b => b.setAttribute('aria-pressed', b.dataset.room === r));
+  strip.innerHTML = '';
+  ROOMS[r].order.forEach((id, i) => {
+    const b = document.createElement('button'); b.type = 'button'; b.dataset.id = id; b.setAttribute('role','listitem');
+    b.setAttribute('aria-label', `${i+1}. ${SCENES[id].title}`);
+    b.innerHTML = `<img src="${P + SCENES[id].img}.webp" alt="" loading="lazy"><span class="n">${i+1}</span>`;
+    b.addEventListener('click', () => { stopTour(); go(id); });
+    strip.appendChild(b);
+  });
+  if (navigate){ trail = []; go(ROOMS[r].order[0], {push:false}); }
+}
+
+function step(d){
+  const ord = ROOMS[room].order, i = ord.indexOf(current);
+  const nextId = ord[(i + d + ord.length) % ord.length];
+  // walk "through" a hotspot if one leads to the next view
+  const hsEl = d > 0 && layer ? [...layer.querySelectorAll('.hs')][SCENES[current].hs.findIndex(h => h.to === nextId)] : null;
+  go(nextId, {via: hsEl || null});
+}
+
+/* ---------- guided tour ---------- */
+function startTour(){ $('#play').setAttribute('aria-pressed', 'true'); $('#playLabel').textContent = 'Pause';
+  $('#playIcon').innerHTML = '<path d="M4 2.5h3v11H4zM9 2.5h3v11H9z"/>'; schedule(); }
+function schedule(){ clearTimeout(tourTimer); tourTimer = setTimeout(() => { step(1); schedule(); }, reduced ? 7000 : 6500); }
+function stopTour(){ if (!tourTimer) return; clearTimeout(tourTimer); tourTimer = null; $('#play').setAttribute('aria-pressed', 'false');
+  $('#playLabel').textContent = 'Guided tour'; $('#playIcon').innerHTML = '<path d="M4 2.5v11l9-5.5z"/>'; }
+$('#play').addEventListener('click', () => tourTimer ? stopTour() : startTour());
+
+/* ---------- controls ---------- */
+$('#prev').addEventListener('click', () => { stopTour(); step(-1); });
+$('#next').addEventListener('click', () => { stopTour(); step(1); });
+$('#back').addEventListener('click', () => { stopTour(); const id = trail.pop(); if (id) go(id, {push:false}); });
+document.querySelectorAll('.rooms button').forEach(b => b.addEventListener('click', () => { stopTour(); if (b.dataset.room !== room) setRoom(b.dataset.room); }));
+$('#light').addEventListener('input', e => {
+  const v = +e.target.value; e.target.setAttribute('aria-valuetext', ['Late afternoon','Dusk','Night'][v]);
+  layer?._imgs.forEach((im, i) => { im.style.opacity = i === 0 || i <= v ? 1 : 0; });
+});
+
+/* ---------- AI film ---------- */
+const vw = $('#videoWrap'), video = $('#video');
+$('#filmBtn').addEventListener('click', () => {
+  stopTour(); const f = SCENES[current].film; if (!f) return;
+  video.src = f.src; video.poster = f.poster; $('#aiNote').textContent = f.note;
+  vw.hidden = false; video.currentTime = 0; video.play().catch(() => {}); $('#closeVideo').focus();
+});
+function closeVideo(){ video.pause(); vw.hidden = true; $('#filmBtn').focus(); }
+$('#closeVideo').addEventListener('click', closeVideo);
+video.addEventListener('ended', () => setTimeout(closeVideo, 600));
+
+/* ---------- keyboard ---------- */
+addEventListener('keydown', e => {
+  if (e.target.matches('input')) return;
+  if (!vw.hidden && e.key === 'Escape') return closeVideo();
+  if (e.key === 'ArrowRight'){ stopTour(); step(1); }
+  else if (e.key === 'ArrowLeft'){ stopTour(); step(-1); }
+  else if (e.key === ' ' && !e.target.matches('button')){ e.preventDefault(); tourTimer ? stopTour() : startTour(); }
+  else if (e.key === '1'){ stopTour(); room !== 'suite' && setRoom('suite'); }
+  else if (e.key === '2'){ stopTour(); room !== 'superior' && setRoom('superior'); }
+  else if (e.key.toLowerCase() === 'l'){ stage.classList.toggle('labels'); }
+});
+
+/* ---------- pointer: parallax, drag to look, flick to move ---------- */
+let drag = null;
+stage.addEventListener('pointermove', e => {
+  if (drag){
+    const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+    if (Math.abs(dx) + Math.abs(dy) > 6) drag.moved = true;
+    pan.x = clamp(drag.px + dx, bounds.x); pan.y = clamp(drag.py + dy, bounds.y);
+    return;
+  }
+  if (reduced || e.pointerType !== 'mouse') return;
+  const r = stage.getBoundingClientRect();
+  parT.x = -((e.clientX - r.left) / r.width - .5) * Math.min(28, bounds.x * 2 + 6);
+  parT.y = -((e.clientY - r.top) / r.height - .5) * Math.min(18, bounds.y * 2 + 4);
+});
+stage.addEventListener('pointerleave', () => { parT = {x:0, y:0}; });
+stage.addEventListener('pointerdown', e => {
+  if (e.target.closest('button,input,.video-wrap')) return;
+  drag = {x:e.clientX, y:e.clientY, px:pan.x, py:pan.y, t:performance.now(), moved:false};
+  stage.setPointerCapture(e.pointerId); hideHint();
+});
+stage.addEventListener('pointerup', e => {
+  if (!drag) return;
+  const dx = e.clientX - drag.x, dy = e.clientY - drag.y, dt = performance.now() - drag.t;
+  if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.4 && (dt < 320 || bounds.x < 4)){
+    pan.x = drag.px; stopTour(); step(dx < 0 ? 1 : -1);
+  }
+  drag = null;
+});
+stage.addEventListener('pointercancel', () => { drag = null; });
+
+function hideHint(){ $('#hint').style.opacity = 0; }
+setTimeout(hideHint, 5000);
+addEventListener('resize', () => { if (layer){ fit(layer); pan.x = clamp(pan.x, bounds.x); pan.y = clamp(pan.y, bounds.y); } });
+
+/* ---------- start ---------- */
+// Embed mode for the website's room pages: ?embed=1&room=superior|suite locks the tour to one room
+// and hides the header (the page around it already names the room).
+const params = new URLSearchParams(location.search);
+const embedRoom = ROOMS[params.get('room')] ? params.get('room') : null;
+if (params.get('embed') === '1') document.documentElement.classList.add('embed');
+const start = SCENES[location.hash.slice(1)] ? location.hash.slice(1) : (embedRoom ? ROOMS[embedRoom].order[0] : 'suite-room');
+setRoom(sceneRoom(start), false);
+go(start, {push:false});
+if (matchMedia('(hover: none)').matches) $('#hint').textContent = 'Tap a dot to move · drag to look around';
+</script>
+</body>
+</html>
